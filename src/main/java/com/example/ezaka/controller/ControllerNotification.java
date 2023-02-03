@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/notif")
+@CrossOrigin
 public class ControllerNotification {
     NotificationDao notificationDao=new NotificationDao();
     @PostMapping("/sendmessage")

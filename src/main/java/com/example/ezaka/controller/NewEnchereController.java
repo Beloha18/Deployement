@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/enregistrer")
+@CrossOrigin
 public class NewEnchereController {
     @Autowired
     AjoutEnchere ajoutEnchereRepo;

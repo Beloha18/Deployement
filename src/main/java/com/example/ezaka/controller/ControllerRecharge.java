@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/recharge")
+@CrossOrigin
 public class ControllerRecharge {
     RechargeDao rechargeDao=new RechargeDao();
     @PostMapping("/arecharger")

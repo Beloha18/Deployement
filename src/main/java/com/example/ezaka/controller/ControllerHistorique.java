@@ -5,15 +5,13 @@ import com.example.ezaka.model.Historique;
 import com.example.ezaka.dao.HistoriqueDao;
 import com.example.ezaka.model.Historique;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/historique")
+@CrossOrigin
 public class ControllerHistorique {
     HistoriqueDao  historiqueDao=new HistoriqueDao();
     @GetMapping("/histoencours/{client}")

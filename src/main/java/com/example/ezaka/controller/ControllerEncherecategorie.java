@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 @RestController
 @RequestMapping("/enchere")
+@CrossOrigin
 public class ControllerEncherecategorie {
 
 
