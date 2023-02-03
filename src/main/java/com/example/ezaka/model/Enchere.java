@@ -30,6 +30,21 @@ public class Enchere{
     public int duree_id_enchere;
     @Column(name = "enchere_status")
     public int enchere_status;
+
+    public Enchere(String image_enchere) {
+        this.image_enchere = image_enchere;
+    }
+
+    public String getImage_enchere() {
+        return image_enchere;
+    }
+
+    public void setImage_enchere(String image_enchere) {
+        this.image_enchere = image_enchere;
+    }
+
+    @Column(name="image_enchere")
+    public String image_enchere;
     public Enchere(String enchere_name, Timestamp enchere_date, String enchere_desc, String client_id_enchere, double enchere_prix_depart, int duree_id_enchere, int enchere_status) {
         this.enchere_name = enchere_name;
         this.enchere_date = enchere_date;

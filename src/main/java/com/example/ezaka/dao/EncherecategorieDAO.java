@@ -19,7 +19,7 @@ public class EncherecategorieDAO {
         try{
             connectpg=con.getConnect();
             statement=connectpg.createStatement();
-            String sql="SELECT * FROM encherecategorie where (";
+            String sql="select distinct(enchere_id_catench),categorie_id_catench,duree,enchere_name,enchere_date,enchere_desc,client_id_enchere,client_name,client_forname,enchere_prix_depart,enchere_status,label from encherecategorieselect distinct(enchere_id_catench),enchere.* from encherecategorie join enchere on encherecategorie.enchere_id_catench = enchere.enchere_id where (";
         for (int i=0;i<listcat.size();i++){
              sql+="label='"+listcat.get(i).getLabel()+"'";
              if(i<listcat.size()-1){

@@ -10,6 +10,7 @@ public class Admin extends BDD {
     String id;
     String admin_email;
     String admin_mdp;
+    String token;
 
     public Admin(String id, String email, String mdp){
         this.id=id;

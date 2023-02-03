@@ -18,7 +18,7 @@ public class HistoriqueDao {
         try{
             connectpg=con.getConnect();
             statement=connectpg.createStatement();
-            String sql="SELECT*FROM enchereencours where client_id_enchere='"+client+"'order by prop_date ";
+            String sql="SELECT*FROM enchereencours where client_id_prop='"+client+"'order by prop_date ";
             result= statement.executeQuery(sql);
             while(result.next())
             {
@@ -59,7 +59,7 @@ public class HistoriqueDao {
         try{
             connectpg=con.getConnect();
             statement=connectpg.createStatement();
-            String sql="SELECT*FROM tousenchere where client_id_enchere='"+client+"'order by prop_date ";
+            String sql="SELECT*FROM tousenchere where client_id_prop='"+client+"'order by prop_date ";
             result= statement.executeQuery(sql);
             while(result.next())
             {
@@ -99,7 +99,7 @@ public class HistoriqueDao {
         try{
             connectpg=con.getConnect();
             statement=connectpg.createStatement();
-            String sql="SELECT*FROM encherefait where client_id_enchere='"+client+"'order by prop_date ";
+            String sql="SELECT*FROM encherefait where client_id_prop='"+client+"'order by prop_date ";
             result= statement.executeQuery(sql);
             while(result.next())
             {

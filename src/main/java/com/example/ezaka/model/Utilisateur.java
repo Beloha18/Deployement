@@ -31,6 +31,21 @@ public class Utilisateur {
     @Column(name = "client_dtn")
     public Date client_dtn;
 
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    public Utilisateur(String token) {
+        this.token = token;
+    }
+
+    @Column(name = "token")
+    public String token;
+
     public String getClient_id() {
         return client_id;
     }
