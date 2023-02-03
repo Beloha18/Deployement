@@ -4,6 +4,7 @@ import com.example.ezaka.model.Utilisateur;
 import com.example.ezaka.repository.UtilisateurRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
@@ -16,6 +17,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 @Service
+@CrossOrigin
 public class UtilisateurService {
     @Autowired
     UtilisateurRepository ur;
