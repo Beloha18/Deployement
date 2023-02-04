@@ -4,9 +4,8 @@ import com.example.ezaka.dao.ClientDao;
 import com.example.ezaka.model.Client;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-@RestController
 @CrossOrigin
+@RestController
 @RequestMapping("/Client")
 public class ClientController {
     @PostMapping("/loginfrontoff")
