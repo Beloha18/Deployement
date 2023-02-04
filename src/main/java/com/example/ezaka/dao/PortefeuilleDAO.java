@@ -1,18 +1,16 @@
 package com.example.ezaka.dao;
 
-
 import com.example.ezaka.Connection.Connexion;
-import com.example.ezaka.bdd.BDD;
-import com.example.ezaka.model.Duree;
+import com.example.ezaka.model.Portefeuille;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
-import java.util.ArrayList;
 
-public class DureeDao extends BDD {
-    public static ArrayList<Duree> getallduree() throws Exception {
-        ArrayList<Duree> duree=new ArrayList<Duree>();
+public class PortefeuilleDAO {
+    public double getSoldeof(String client_id) throws Exception {
+        double nombre = 0;
+        Portefeuille portefeuille=null;
         Connection connectpg=null;
         Statement statement=null;
         Connexion con=new Connexion();
@@ -20,14 +18,12 @@ public class DureeDao extends BDD {
         try{
             connectpg=con.getConnect();
             statement=connectpg.createStatement();
-            String sql="SELECT*FROM duree";
+            String sql="SELECT solde FROM portefeuille where client_id_trans='"+client_id+"';";
+            System.out.println(sql);
             result= statement.executeQuery(sql);
             while(result.next())
             {
-                Duree dr=new Duree();
-                dr.setDuree_id(result.getInt("duree_id"));
-                dr.setDuree(result.getDouble("duree"));
-                duree.add(dr);
+                nombre=result.getDouble("solde");
             }
         }
         catch(Exception e)
@@ -45,6 +41,6 @@ public class DureeDao extends BDD {
                 connectpg.close();
             }
         }
-        return duree;
+        return nombre;
     }
 }
